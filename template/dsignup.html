@@ -1,0 +1,48 @@
+User
+<!-- signup.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  {% include 'link.html' %}
+ <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+  <div class="sign-form">
+    <img src="{% static 'img/sign.png' %}" alt="Image">
+  <h2>Sign Up</h2>
+  <form method="post" action="">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" class="input-box" placeholder="username" name="username" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email"  class="input-box" placeholder="email" id="email" name="email" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" class="input-box" placeholder="password" id="password" name="password" required><br><br>
+    <label for="confirm_password">Confirm Password:</label>
+    <input type="password" class="input-box" placeholder="confirm password" id="confirm_password" name="confirm_password" required><br><br>
+    {% comment %} <input type="submit" value="Sign Up"> {% endcomment %}
+    <button type="button" name="signup" class="signup-btn">sign up</button>
+  </form>
+</div>
+  <!-- footer section -->
+    
+   
+  <footer class="bg-dark text-center text-white mt-1">
+    <!-- Social media icons -->
+    <section class="mb-4">
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+    </section>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <p>All rights reserved @- Image Processing</p>
+    </div>
+</footer>
+</body>
+</html>

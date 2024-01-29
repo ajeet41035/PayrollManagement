@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+  {% include 'link.html' %}
+ 
+ 
+  <title>Payroll Management System</title>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Payroll System</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/aboutUs/">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="/signin/">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="/signup/">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="/employeeLogin/">Employee Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Payroll management system heading -->
+  <div class="container-fluid">
+    <marquee direction="left" scrollamount="30" onmouseover="this.stop()" onmouseout="this.start()">
+      <h1>WELCOME TO OUR PAYROLL MANAGEMENT SYSTEM</h1>
+    </marquee>
+    <img src="{% static 'img/Image1.jpg' %}" alt="Image" class="img-fluid  w-100">
+  </div>
+
+  <!-- Content Section -->
+  <section id="content" class="container mt-4">
+    <div class="section">
+      <p>
+        Our Payroll Management System is designed to simplify and streamline the process of managing payroll for your
+        organization. Whether you have a small business or a large enterprise, our system provides you with the tools
+        and features you need to handle payroll efficiently and accurately.
+      </p>
+      <p>
+        Experience the convenience and efficiency of our Payroll Management System. Say goodbye to manual calculations
+        and paperwork, and let our system handle your payroll needs accurately and effortlessly. Get started today and
+        transform your payroll management process with our reliable and user-friendly Payroll Management System.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-center text-white mt-4">
+    <!-- Social media icons -->
+    <section class="mb-4">
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+    </section>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <p>All rights reserved @- Payroll Management</p>
+    </div>
+  </footer>
+
+ 
+</body>
+
+</html>

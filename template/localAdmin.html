@@ -1,0 +1,85 @@
+ {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/localAdmin.css' %}">
+  <title>{{request.user}}</title>
+  {% include 'link.html' %}
+</head>
+<body>
+  {% comment %} <a href="/signout/">LogOut</a>
+  <h1>Hello {{request.user}}</h1> {% endcomment %}
+   {% comment %} <a href="/employeeDetails/">Add Employee</a> 
+  <a href="/employeeList/">View Employee Details</a>
+  <a href="/salaryDetails/">Add Salary Details</a>
+  <a href="/viewSalaryDetails/">View Salary Details</a>
+  <a href="/removeEmployee/">Remove Employee</a> {% endcomment %}
+
+
+
+
+
+  <!-- navigation bar -->
+    {% csrf_token %}
+      <header>
+        <div class="navbar">
+      <h3>payroll management system</h3>
+              
+            
+           <a href="/signout/">Logout</a>
+              
+        </div>
+      </header>
+      
+      <!-- contact -->
+      <section id="contact" class="admin">
+        <marquee direction="left" scrollamount="20" onmouseover="this.stop()" onmouseout="this.start()">
+          <h2>Welcome to the Admin Page</h2>
+          
+        </marquee>
+        
+        <div class="image">
+          <img src="{% static 'img/images.jpeg' %}"  width="1400" height="800">
+        
+        <div class="contact">
+          
+          <div class="emp">
+            <a href="/employeeDetails/"><strong>Add Employee</a>
+          </div>
+          <div class="dep">
+             <a href="/employeeList/">View Employee Details</a>
+          </div>
+          
+          <div class="detail">
+           <a href="/salaryDetails/">Add Salary Details</a>
+          </div>
+          <div class="salary">
+            <a href="/viewSalaryDetails/">View Salary Details</a>
+          </div>
+          <div class="report">
+            <a href="/removeEmployee/">Remove Employee</a>
+          </div>
+        </div>
+      </div>
+      </section>
+      
+      <!-- footer section -->
+    
+   
+  <footer class="bg-dark text-center text-white mt-1">
+    <!-- Social media icons -->
+    <section class="mb-4">
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+    </section>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <p>All rights reserved @- Image Processing</p>
+    </div>
+</footer>
+      </body>
+</html>

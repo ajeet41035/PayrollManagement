@@ -1,0 +1,67 @@
+ {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/emp.css' %}">
+    <title>Employee Page</title>
+    {% include 'link.html' %}
+ 
+</head>
+
+<body>
+   <header>
+    <div class="navbar">
+      <h3>payroll management system</h3>
+    </div>
+
+  </header> 
+   
+<h1>Hello {{employee.first_name}}, Here are your details:</h1>
+
+           
+<div class="container-fluid"> 
+        <div class="image">
+                <img src="{% static 'img/emp.jpg' %}" width="1300" height="750">
+            </div>    
+<div class="contact">
+    
+    <p>Full Name: {{employee.first_name}} {{employee.last_name}}<br>
+        <br>Empoloyee Id: {{employee.employee_id}}<br>
+        <br>Email: {{employee.email}}<br>
+        <br>Contact Number: {{employee.mobile_number}}<br>
+        <br>Address: {{employee.address}}<br>
+        <br>Pincode: {{employee.pincode}}<br>
+        <br>Date of Joining: {{employee.start_date}}
+    </p>
+</div>
+</div>
+    
+    <div class="section">
+     
+        <button class="button"><a href="/updateEmployee/{{employee.employee_id}}">Update Details</a></button>
+        <button class="button"><a href="/payslip/{{employee.employee_id}}">Generate PaySlip</a></button>
+        <button class="button"><a href="/home">Logout</a></button> 
+    </div>
+ 
+
+<!-- footer section -->
+    
+   
+  <footer class="bg-dark text-center text-white mt-1">
+    <!-- Social media icons -->
+    <section class="mb-4">
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+    </section>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <p>All rights reserved @- Image Processing</p>
+    </div>
+</footer>
+    
+</body>
+</html>

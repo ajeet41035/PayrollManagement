@@ -1,0 +1,74 @@
+/* main.css */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navigation Bar Styles */
+  .navbar {
+    background-color: #343a40;
+    padding: 15px 0;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  
+  .navbar a:hover {
+    color: #007bff;
+  }
+  
+  /* Heading Styles */
+  .container-fluid {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  h1 {
+    color: #007bff;
+  }
+  
+  /* Content Section Styles */
+  #content {
+    padding: 20px 0;
+  }
+  
+  .section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .btn-floating {
+    margin-right: 5px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      text-align: center;
+    }
+  
+    .navbar a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .container-fluid {
+      margin-top: 60px;
+    }
+  }
+  

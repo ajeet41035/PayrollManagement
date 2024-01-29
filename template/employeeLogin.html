@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/employeeLogin.css' %}">
+  <title>Login</title>
+  {% include 'link.html' %}
+  
+</head>
+<body>
+  <div class="login-container">
+    <img src="{% static 'img/employee.png' %}">
+    <h2>Employee Login</h2>
+    <form method="post">
+      {% csrf_token %}
+      
+          <label for="username">Username:</label>
+          <input type="text" class="input-box" name="username" placeholder="employee id" required>
+          <label for="password">Password:</label>
+          <input type="password" class="input-box" name="password" placeholder="Password" required>
+         
+          <button type="submit" class="login-btn">Login</button>
+    </form>
+  </div>
+   <!-- footer section -->
+    
+   
+  <footer class="bg-dark text-center text-white mt-1">
+    <!-- Social media icons -->
+    <section class="mb-4">
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+    </section>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <p>All rights reserved @- Image Processing</p>
+    </div>
+</footer>
+</body>
+</html>
